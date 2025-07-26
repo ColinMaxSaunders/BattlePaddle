@@ -6,6 +6,10 @@ This script is designed to be run as a standalone program.
 import sys
 import pygame
 from constants import *
+from player import Player
+from paddle import Paddle
+from playingField import PlayingField
+from shot import Shot
 
 def main():
     # Initialize Pygame
@@ -44,7 +48,7 @@ def main():
     Paddle.containers = (paddles, updatable, drawable)
     Shot.containers = (shots, updatable, drawable)
     PlayingField.containers = updatable
-    asteroid_field = AsteroidField()
+    playing_field = PlayingField()
 
     pygame.display.set_caption("Pygame Window")
 
@@ -60,7 +64,7 @@ def main():
 
         for obj in drawable:
          obj.draw(screen)
-         
+
         # Update the display
         pygame.display.flip()
 
