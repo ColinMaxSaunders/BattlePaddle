@@ -1,0 +1,14 @@
+import sys
+import os
+
+marker_file = os.path.expanduser('~/.battlepaddle_first_run_marker')
+def is_first_run(marker_file):
+    if not os.path.exists(marker_file):
+        # Create the marker file to signify future runs are not first-time
+        with open(marker_file, 'w') as f:
+            f.write('battlepaddle_first_run_marker')
+        print("First Time")
+        return True
+    else:
+        print("Not First Time")
+        return False

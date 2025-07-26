@@ -36,5 +36,5 @@ SCREEN_WIDTH = DEFAULT_SCREEN_WIDTH
 SCREEN_HEIGHT = DEFAULT_SCREEN_HEIGHT
 
 
-screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+#screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 return screen
